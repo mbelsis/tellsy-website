@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Security – Tellsy</title>
+  <meta name="description" content="How Tellsy protects what you dictate: on-device storage, iOS data protection, Face ID locks, no servers, and how to report a security issue.">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/apple-touch-icon.png" alt="">Tellsy</a>
+    <nav class="nav" aria-label="Main">
+      <a href="/#features" class="hide-small">Features</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/security/" aria-current="page">Security</a>
+      <a href="/support/">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="wrap">
+    <header>
+      <span class="eyebrow">Security</span>
+      <h1>Security Policy</h1>
+      <p class="meta">Last updated: 29 October 2026</p>
+    </header>
+
+    <div class="summary card">
+      <p><b>The short version.</b> The safest data is data that never leaves your phone. Tellsy has no server and no account, so there is no database of users or dictations to be breached. What you say is kept on your iPhone, protected by iOS, and can be locked behind Face ID.</p>
+    </div>
+
+    <h2>No servers, no accounts</h2>
+    <p>The developer runs no server for the app and has no user accounts. Tellsy makes no network requests of its own and contains no third-party code that does: no analytics, advertising, crash-reporting or AI services. The only network use comes from Apple's own services that the app relies on, listed below.</p>
+
+    <h2>How your data is protected on the iPhone</h2>
+    <table>
+      <tr><th>What</th><th>Where</th><th>Protection</th></tr>
+      <tr><td>Your items, what you said, History</td><td>Tellsy's private storage</td><td>Encrypted at rest by iOS Data Protection; readable only after the iPhone has been unlocked once since it started. Sealed off from every other app by the iOS sandbox.</td></tr>
+      <tr><td>Settings and learned vocabulary</td><td>Tellsy's private settings</td><td>The same iOS protection and sandbox.</td></tr>
+      <tr><td>Summary for the Today widget</td><td>A storage area shared only between Tellsy and its own widget</td><td>The same iOS protection. Contains only titles and times of the coming week.</td></tr>
+      <tr><td>Notifications</td><td>Scheduled on the iPhone itself</td><td>No server delivers them. Whether their text shows on a locked iPhone follows iOS's Show Previews setting.</td></tr>
+    </table>
+
+    <h3>Face ID locks</h3>
+    <p>History and My items can each be set to ask for Face ID, Touch ID or the passcode before they open. Turning a lock off also asks for the owner's Face ID or passcode. These locks stop someone holding your unlocked phone from browsing your items; the underlying protection is the iOS encryption above.</p>
+
+    <h3>On a locked iPhone</h3>
+    <p>Siri can create new items while the iPhone is locked, which is what makes hands-free use possible. It will not change an existing item or read its title back until the phone is unlocked. iOS offers apps no direct way to know the phone is locked, so Tellsy relies on the moment iOS locks away protected data, which is about ten seconds after the screen locks; a change spoken within those seconds still goes through. On an iPhone without a passcode there is no lock to rely on.</p>
+
+    <h3>Apple Watch</h3>
+    <p>Sentences dictated on the Apple Watch travel to the iPhone over Apple's WatchConnectivity, which Apple encrypts. To recognise a sentence delivered twice, the iPhone keeps only a one-way fingerprint of it, never the words. A sentence the Watch has not yet delivered waits in the Watch app's own storage and is removed once the iPhone has it.</p>
+
+    <h2>Apple services Tellsy uses</h2>
+    <ul>
+      <li><b>Speech recognition.</b> On the iPhone whenever Apple supports the language offline; otherwise through Apple's speech service.</li>
+      <li><b>Siri, Calendar, Reminders, Notes, iCloud.</b> Items you send to Apple's apps are stored and synced by those apps under your Apple account.</li>
+      <li><b>Translation and Apple Intelligence.</b> Optional, off by default, and on the device. iOS may download language packs.</li>
+    </ul>
+    <p>These are governed by <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</p>
+
+    <h2>Backups</h2>
+    <p>Your iPhone backups may include Tellsy's data, as they include every app's. Backups to iCloud are encrypted by Apple; with Apple's Advanced Data Protection turned on, they are end-to-end encrypted. Items kept only in Tellsy exist only on your iPhone and in your backups.</p>
+
+    <h2>What Tellsy cannot protect against</h2>
+    <ul>
+      <li>Someone who knows your passcode and has your phone.</li>
+      <li>An iPhone whose security has been broken, for example by jailbreaking or by spyware exploiting iOS. Like nearly every app, Tellsy relies on iOS's protections; on a compromised phone they no longer hold.</li>
+      <li>Copies outside Tellsy: items you exported to other apps or accounts, and screenshots or shares you made.</li>
+    </ul>
+
+    <h2>Permissions</h2>
+    <p>Tellsy asks for each permission only when a feature first needs it: the microphone and speech recognition when you record, Calendar or Reminders when an item goes there, Contacts if you use name matching, notifications when a reminder kept in Tellsy first needs to ring. Every permission can be withdrawn in iOS Settings; typed commands and existing items keep working.</p>
+
+    <h2>Reporting a security issue</h2>
+    <p>If you believe you have found a security or privacy problem in Tellsy or on this website, please email <a href="mailto:support@tellsy.app?subject=Tellsy%20security">support@tellsy.app</a> with “Tellsy security” in the subject. Describe what you found and how to reproduce it; please do not include other people's personal data.</p>
+    <ul>
+      <li>You will get a reply, normally within a few working days.</li>
+      <li>Confirmed issues are fixed in an App Store update as quickly as their seriousness requires.</li>
+      <li>If you wish, you will be credited once the fix is released.</li>
+    </ul>
+    <p>Please give a reasonable time to fix an issue before making it public, and do not access or change data that is not yours while investigating.</p>
+
+    <p class="note-box">See also the <a href="/privacy/">privacy policy</a>, which says in detail what is stored and for how long.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Tellsy. Tellsy is not affiliated with Apple.</span>
+    <nav aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="/privacy/">Privacy policy</a>
+      <a href="/support/">Support</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
